@@ -1,12 +1,29 @@
 #+TITLE: Wacuri frontend
+#+EXPORT_FILE_NAME: WACURI.md
 
-https://github.com/alexiscott/wacuri
+Wacuri: https://github.com/alexiscott/wacuri
 
-1. Setup the backend over https://github.com/alexiscott/wacuri-api - This process basically involves creating a broker and having it available on a public URL.
+Backend: https://github.com/alexiscott/wacuri-api
 
-2. Now add the path to the broker's public URL in this repo in App.js
+* Preliminary steps.
+- Setup the backend over at https://github.com/alexiscott/wacuri-api - This process basically involves creating a broker and having it available on a public URL. It's important that this happens first as it's needed for communication between users.
+- Add the uri to the broker's public URL in this repo in the  App.js file.
 
 * Setup for a Mac and a real iphone
+** Reality check. Running *any* Native App on an IOS Device
+
+First checkout this YouTube video
+
+[[https://www.youtube.com/watch?v=Ya3VCVNrEmU][014 Running our React Native App on an iOS Device - YouTube]]
+
+In order to keep things as simple as possible, I did this with the default react-native app that you get when you run ~npx react-native init~
+
+The Steps include:
+- Plug in iPhone to USB.
+- Open ios/xcodeworkspace
+- Sign your app . You need a dev account for this.
+
+** Running *this* app on an IOS device.
 Run initial tasks
 #+begin_src shell
 npm install
@@ -17,13 +34,19 @@ pod install
 3. Open the workspace file  in ~Xcode~ ~basicwebrtcexample.xcworkspace~ . You will need to have configured ~Xcode~ to work with the frontend app, to work with your App and to open in an iphone. TODO Add LINK. Now, Build the APP via Xcode.
 
 
-4. Trust the app on the real iphone  under Settings/General/Profiles and device management/ 
+4. Trust the app on the real iphone  under Settings/General/Profiles and device management/
 - Open the app. You might get a message about the app not being on the same network. I unplugged the USB socket and then the app opened with the camera steam working.
 
-  ---
-  Afterwards, opened an emulator on my Linux Box ( You will need to have setup Android Studio).
+** Open a simulator for a different app using Android
 
--  set the public URL.
-- npm start
-  - npm run android
-    - You should see the connections number on the Android page increase.
+This is where you will be able to start using the message broker for the two apps to talk to one another, and for sharing audio and video streams of course.
+
+I did this on Linux.  You will need to have setup Android Studio so as to give you access to simulators  - I don't have access to an actual Android device.
+
+Add the broker's public URL to App.js
+#+begin_src shell
+npm start
+npm run android
+#+end_src
+
+You should see the connections number on the NGROK page increase.
