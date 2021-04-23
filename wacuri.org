@@ -1,21 +1,20 @@
 #+TITLE: Wacuri frontend
 
-This is a fork of  https://github.com/jdmg94/react-native-webrtc-example
+https://github.com/alexiscott/wacuri
 
-1. Setup the backend
-See README ON GIT. Basically involved creating a broker and having it on a public URL.
+1. Setup the backend over https://github.com/alexiscott/wacuri-api - This process basically involves creating a broker and having it on available on a public URL.
 
-2.
-Now modify the path to that public URL here in App.js
+2. Now add the path to the broker's public URL in this repo in App.js
 
-
+* Setup for a Mac and a real iphone.
+Run initial tasks
 #+begin_src shell
 npm install
 cd ios
 pod install
 #+end_src
 
-3. Open the workspace file in ~Xcode~. You will need to have configure ~Xcode~ with the frontend app if you haven't already, to work with your App and to open in an iphone. SEE LINK. Build the APP.
+3. Open the workspace file  in ~Xcode~ code~basicwebrtcexample.xcworkspace . You will need to have configured ~Xcode~ to work with the frontend app, to work with your App and to open in an iphon. SEE LINK. Now, Build the APP via xCode.
 
 
    [[file:ios/basicwebrtcexample.xcworkspace][file:/ssh:alex@homer:/Users/alex/workspace/frontend/ios/basicwebrtcexample.xcworkspace]]
