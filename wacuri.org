@@ -1,0 +1,32 @@
+#+TITLE: Wacuri frontend
+
+This is a fork of  https://github.com/jdmg94/react-native-webrtc-example
+
+1. Setup the backend
+See README ON GIT. Basically involved creating a broker and having it on a public URL.
+
+2.
+Now modify the path to that public URL here in App.js
+
+
+#+begin_src shell
+npm install
+cd ios
+pod install
+#+end_src
+
+3. Open the workspace file in ~Xcode~. You will need to have configure ~Xcode~ with the frontend app if you haven't already, to work with your App and to open in an iphone. SEE LINK. Build the APP.
+
+
+   [[file:ios/basicwebrtcexample.xcworkspace][file:/ssh:alex@homer:/Users/alex/workspace/frontend/ios/basicwebrtcexample.xcworkspace]]
+
+  4. Trust the app on the iphone Settings/General/Profiles and device management/ - if it's not already.
+- Open the app. You might get a message about them not being on the same network. I unplugged the USB socket and then the app opened with the camera on.
+
+  ---
+  I then opened an emulator on my Linux Box ( You will need to have setup Android Studio).
+
+-  set the public URL.
+- npm start
+  - npm run android
+    - You should see the connections number on the Android page increase.
