@@ -14,14 +14,14 @@ cd ios
 pod install
 #+end_src
 
-3. Open the workspace file  in ~Xcode~ code~basicwebrtcexample.xcworkspace . You will need to have configured ~Xcode~ to work with the frontend app, to work with your App and to open in an iphon. SEE LINK. Now, Build the APP via xCode.
+3. Open the workspace file  in ~Xcode~ ~basicwebrtcexample.xcworkspace~ . You will need to have configured ~Xcode~ to work with the frontend app, to work with your App and to open in an iphone. TODO Add LINK. Now, Build the APP via Xcode.
 
 
-4. Trust the app on the iphone Settings/General/Profiles and device management/ 
-- Open the app. You might get a message about them not being on the same network. I unplugged the USB socket and then the app opened with the camera on.
+4. Trust the app on the real iphone  under Settings/General/Profiles and device management/ 
+- Open the app. You might get a message about the app not being on the same network. I unplugged the USB socket and then the app opened with the camera steam working.
 
   ---
-  I then opened an emulator on my Linux Box ( You will need to have setup Android Studio).
+  Afterwards, opened an emulator on my Linux Box ( You will need to have setup Android Studio).
 
 -  set the public URL.
 - npm start
