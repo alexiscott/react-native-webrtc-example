@@ -6,7 +6,7 @@ https://github.com/alexiscott/wacuri
 
 2. Now add the path to the broker's public URL in this repo in App.js
 
-* Setup for a Mac and a real iphone.
+* Setup for a Mac and a real iphone
 Run initial tasks
 #+begin_src shell
 npm install
