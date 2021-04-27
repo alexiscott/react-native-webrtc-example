@@ -29,11 +29,15 @@ const App = () => {
   // every time a peer connects/disconnects
   const peerConnections = useRef(new Map());
   const [stream, setStream] = useState(null);
-  const [socket] = useState(Socket.connect('ws://8f9e54dd.ngrok.io')); // replace with your host machine's IP or public url
+  const [socket] = useState(Socket.connect('ws://a56726429e1c.ngrok.io')); // replace with your host machine's IP or public url
 
   useEffect(() => {
     socket.on('connect', () => {
+
+      socket.emit('frontendMobileConnected');
+
       if (stream) socket.emit('broadcaster');
+
 
       socket.on('watcher', async id => {
         const connectionBuffer = new RTCPeerConnection(config);
